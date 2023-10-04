@@ -113,6 +113,6 @@ public class TaskService {
 
     List<Task> tasks = taskRepository.findAll();
 
-    excelService.gerarExcel(tasks, Task.class);
+    excelService.gerarExcel(tasks);
   }
 }
