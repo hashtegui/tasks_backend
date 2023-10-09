@@ -6,11 +6,11 @@ import { Task } from "./Task";
 interface TasksProps {
   tasks: ITask[];
 }
-export const Tasks: React.FC<TasksProps> = ({ tasks }: TasksProps) => {
+export const Tasks: React.FC<TasksProps> = ({ tasks }) => {
   return (
     <Paper withBorder p="lg">
       {tasks.map((task) => (
-        <Task key={task.id} task={task} />
+        <Task key={task.id}  task={task} />
       ))}
     </Paper>
   );

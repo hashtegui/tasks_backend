@@ -15,8 +15,6 @@ export default async function Home() {
   });
   const { data } = (await response.json()) as FetchProps;
 
-  console.log(data);
-
   return (
     <main>
       <Container>
