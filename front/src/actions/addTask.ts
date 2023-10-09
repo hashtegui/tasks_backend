@@ -17,6 +17,10 @@ export async function addTask(prevstate: any, form: FormData) {
 
     const response = await fetch(url, requestOptions);
 
+    if (!response.ok) {
+      throw new Error("Erro ao adicionar tarefa");
+    }
+
     return revalidatePath("/");
   } catch (error) {
     return { message: "Erro ao adicionar tarefa" };
